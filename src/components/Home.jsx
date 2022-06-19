@@ -36,10 +36,13 @@ function getStyles(name, personName, theme) {
 
 export default function Home() {
     const theme = useTheme();
+    // below states are uesed to store multiselects values in array
     const [personName, setPersonName] = React.useState([]);
     const [location, setLocation] = React.useState([]);
     const [market, setMarket] = React.useState([]);
     const [scaleup, setScaleup] = React.useState([]);
+   
+    //  to store inputData
     const [data,setData]=useState({
         business_stage:"",
         age_of_establishment:"",
@@ -66,13 +69,13 @@ export default function Home() {
         scaleup_potential:[]
 
     })
-console.log(data.usp);
+  // form handler 
     const formHandler=(e)=>{
         let {name,value}=e.target;
        setData({...data,[name]:value})
     }
    
-  
+  // below handlers are used to setStates of the multiSelects values
     const handleChange = (event) => {
       const {
         target: { value },
@@ -113,7 +116,6 @@ console.log(data.usp);
       );
       setData({...data,scaleup_potential:[...scaleup]})
     };
-    console.log(data)
   return (
   <>
   <Typography variant='h1'
