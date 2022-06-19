@@ -148,7 +148,7 @@ console.log(data.usp);
       </FormControl>
       <TextField variant='outlined' name='age_of_establishment' type={"number"} label="Age of establishment(years)" onChange={formHandler} sx={{width:"300px"}} />
    </Box>
-   <Box sx={{ width:"100%",display:"flex",justifyContent:"space-evenly", flexWrap:"wrap" ,marginBottom:"15px"}}>
+   <Box sx={{ width:"100%",display:"flex",justifyContent:"space-evenly", flexWrap:"wrap" ,marginBottom:"20px"}}>
    <FormControl  sx={{width:"300px"}}>
         <InputLabel id="demo-simple-select-label">Offered to</InputLabel>
         <Select
@@ -216,7 +216,7 @@ console.log(data.usp);
     </div>
 
 
-   <FormControl  sx={{width:"300px"}}>
+   <FormControl  sx={{width:"300px" , marginTop:"8px"}}>
         <InputLabel id="demo-simple-select-label">Establishment type</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -311,7 +311,7 @@ console.log(data.usp);
     </div>
 
 
-   <FormControl  sx={{width:"300px"}}>
+   <FormControl  sx={{width:"300px" , marginTop:"8px"}}>
         <InputLabel id="demo-simple-select-label">Market research</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -389,7 +389,7 @@ console.log(data.usp);
    <Box sx={{ width:"100%",display:"flex",justifyContent:"space-evenly", flexWrap:"wrap" , marginBottom:"15px"}}>
    <TextField variant='outlined' name='suppliers' type={"text"} label="List of Suppliers" onChange={formHandler}  sx={{width:"300px"}}/>
    <div>
-      <FormControl sx={{ m: 1, width: 300 }}>
+      <FormControl sx={{ width: 300 }}>
         <InputLabel id="demo-multiple-name-label">Marketing avenues</InputLabel>
         <Select
           labelId="demo-multiple-name-label"
