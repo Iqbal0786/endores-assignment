@@ -127,10 +127,10 @@ console.log(data.usp);
       borderBottom:"1px solid gray"
    }}
   >Fill the Form below and see the output on the right side of the window </Typography>
-  <Box sx={{width:"98%" , height:"950px" ,margin:"auto", marginTop:"30px"  , boxShadow:" rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px" , display:"flex", justifyContent:"space-between" ,gap:"15px" }} >
+  <Box sx={{width:"98%" , height:"950px" ,margin:"auto", marginTop:"30px"   , display:"flex", justifyContent:"space-between" ,gap:"15px" , marginBottom:"100px" }} >
   
     {/* form input box */}
-  <Box sx={{width:"50%" ,height:"100%" ,padding:"15px" }}>
+  <Box sx={{width:"50%" ,height:"100%" ,padding:"15px" , boxShadow:" rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px" }}>
    <Box sx={{ width:"100%",display:"flex",justifyContent:"space-evenly", flexWrap:"wrap" , marginBottom:"15px"}}>
    <FormControl  sx={{width:"300px"}}>
         <InputLabel id="demo-simple-select-label">Stage of business</InputLabel>
@@ -449,8 +449,8 @@ console.log(data.usp);
       {/* Sentence box */}
   <Box  sx={{width:"48%" ,height:"100%",
     padding:"15px",
-    overflow: "auto"
- 
+    overflow: "auto",
+   boxShadow:" rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px"
 
 }}>
   { data.business_stage?<p>Samsung is looking for {data.business_stage} their business of Electronics and Communications.</p>:""} 
