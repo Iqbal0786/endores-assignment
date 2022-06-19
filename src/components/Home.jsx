@@ -15,7 +15,7 @@ const MenuProps = {
     },
   },
 };
-
+// below arrays are used to map for multiple MuneItems
 const names = [
     "the entrepreneur's experience in this field", "innovative product/service", "high profit margin", "high growth potential", "superior customer support", "quality and affordable products/service"," high demand in the target market (forward linkage)", "abundant supply of raw materials (backward linkage)", "wide range of products/services", "robust value-chain of the business, frequency of customer visits"
 ];
@@ -25,6 +25,7 @@ const marketings=["Distribution of marketing material (pamphlets/flyers)", "stor
 
 const scalings=["increasing the variety of product/service offering", "expanding the current offering to other geographies", "opening more outlets", "growing the scale of operation", "building value-chain integrations", "other allied revenue streams"]
 
+// function for styling the Select component
 function getStyles(name, personName, theme) {
   return {
     fontWeight:
