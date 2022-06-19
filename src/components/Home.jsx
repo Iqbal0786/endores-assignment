@@ -2,6 +2,7 @@ import { Box, FormControl, InputLabel, MenuItem, Paper, Select, TextField, Typog
 import React, { useState } from 'react'
 import { useTheme } from '@mui/material/styles';
 import OutlinedInput from '@mui/material/OutlinedInput';
+import { borderBottom } from '@mui/system';
 
 
 const ITEM_HEIGHT = 48;
@@ -115,6 +116,17 @@ console.log(data.usp);
     console.log(data)
   return (
   <>
+  <Typography variant='h1'
+   sx={{
+    width:"70%",
+      fontFamily:"monospace",
+      fontSize:"19px",
+      margin:"auto",
+      marginTop:"15px",
+      textAlign:"center",
+      borderBottom:"1px solid gray"
+   }}
+  >Fill the Form below and see the output on the right side of the window </Typography>
   <Box sx={{width:"98%" , height:"950px" ,margin:"auto", marginTop:"30px"  , boxShadow:" rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px" , display:"flex", justifyContent:"space-between" ,gap:"15px" }} >
   
     {/* form input box */}
@@ -441,12 +453,49 @@ console.log(data.usp);
  
 
 }}>
-  <Typography sx={{fontFamily:"revert" , fontSize:"18px" , fontWeight:"normal" ,
+  { data.business_stage?<p>Samsung is looking for {data.business_stage} their business of Electronics and Communications.</p>:""} 
+  { data.age_of_establishment?<p>This enterpise has been operation since {data.age_of_establishment} years and has been serving it's customers since then.</p>:""}
+  
+  { data.primary_product_service_offered &&  data.offered_to?<p>This establishment offers products/services like {data.primary_product_service_offered} to {data.offered_to}</p>:""}
+
+  { data.secondary_product_service_offered?<p>In addition, the enterprise shall also be involved in {data.secondary_product_service_offered}</p>:""}
+
+  { data.processed_products?<p>Other products of the enterprice shall include {data.processed_products}.</p>:""}
+
+  { data.relevant_experience&& data.skill_training?<p>Jhon has relevant experience of {data.relevant_experience} years.The entrepreneur {data.skill_training} in this field of work.</p>:""}
+
+  { data.usp.length>0?<p>The enterprise is uniquely positioned because of its - {data.usp.join(" ,")}.</p>:""}
+
+  { data.establishment_type&& data.business_locality&&data.infra_ownership?<p>The {data.establishment_type} is located in {data.business_locality} area of Boston in a {data.infra_ownership} property</p>:""}
+
+  { data.establishment_area?<p>The size of the establishment is {data.establishment_area} sq.ft.</p>:""}
+  { data.reason_for_location.length>0?<p>This locality is selected because of {data.reason_for_location.join(" , ")}.</p>:""}
+
+
+  { data.market_research?<p>{data.market_research }and the range of products and target market has been identified after that.</p>:""}
+
+  { data.primary_market?<p>The enterprise shall focus on offering its products/services to {data.primary_market} markets.</p>:""}
+
+  { data.customers?<p>Our customers shall include- {data.customers}.</p>:""}
+
+  { data.seasonality?<p>The nature of the business is such that we expect {data.seasonality}.</p>:""}
+
+  { data.competition?<p>Regarding competition, there are {data.competition}.</p>:""}
+
+  { data.suppliers?<p>The enterprise shall procure goods/raw materials from {data.suppliers}.</p>:""}
+  
+  { data.marketing_avenues.length>0?<p>Our marketing avenues to reach the targeted customers shall include- {data.marketing_avenues.join(" , ")}.</p>:""}
+
+  { data.scaleup_potential.length>0?<p>The various foreseeable avenues of scaling up and growing the business in the foreseeable future include- {data.scaleup_potential.join(" , ")}.</p>:""}
+
+   {/* a grouped way */}
+  
+  {/* <Typography sx={{fontFamily:"revert" , fontSize:"18px" , fontWeight:"normal" ,
  lineHeight:"2" , wordSpacing:"4.5px"
 }}>
 
 {`Samsung is looking for ${data.business_stage} their business of Electronis and Communications.This enterpise has been operation since ${data.age_of_establishment} years and has been serving it's customers since then.This establishment offers products/services like ${data.primary_product_service_offered} to ${data.offered_to}. In addition, the enterprise shall also be involved in ${data.secondary_product_service_offered}.Other products of the enterprice shall include ${data.processed_products}.Jhon has relevant experience of ${data.relevant_experience}.The entrepreneur ${data.skill_training} in this field of work.The enterprise is uniquely positioned because of its - ${data.usp.join(" ,")}.The ${data.establishment_type} is located in ${data.business_locality} area of Boston in a ${data.infra_ownership} property.The size of the establishment is ${data.establishment_area} sq.ft.This locality is selected because of ${data.reason_for_location}.${data.market_research }and the range of products and target market has been identified after that.The enterprise shall focus on offering its products/services to ${data.primary_market} markets. Our customers shall include- ${data.customers}.The nature of the business is such that we expect ${data.seasonality}.Regarding competition, there are ${data.competition}.The enterprise shall procure goods/raw materials from ${data.suppliers}.Our marketing avenues to reach the targeted customers shall include- ${data.marketing_avenues}.The various foreseeable avenues of scaling up and growing the business in the foreseeable future include- ${data.scaleup_potential}.`}
-</Typography>
+</Typography> */}
     </Box>
 
   </Box>
